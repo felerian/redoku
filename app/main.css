@@ -1,0 +1,46 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0
+}
+
+.sudoku-row, .sudoku-col {
+    border: 1px solid #444444;
+}
+
+.sudoku-row:first-child {
+    border-top-width: 2px;
+}
+
+.sudoku-row:nth-child(3n) {
+    border-bottom-width: 2px;
+}
+
+.sudoku-col:first-child {
+    border-left-width: 2px;
+}
+
+.sudoku-col:nth-child(3n) {
+    border-right-width: 2px;
+}
+
+.sudoku-cell::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.sudoku-cell {
+    position: relative;
+}
+
+.sudoku-cell-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 5px;
+}
